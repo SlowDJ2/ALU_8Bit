@@ -1,0 +1,5 @@
+set -tmpdir "E:/Project/ALU8b/ALU_8b/ALU_8bit/xst/projnav.tmp"
+set -xsthdpdir "E:/Project/ALU8b/ALU_8b/ALU_8bit/xst"
+elaborate
+-ifn ALU_8bit.prj
+-ifmt mixed

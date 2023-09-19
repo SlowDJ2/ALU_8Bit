@@ -1,0 +1,582 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: ALU_8bit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU_8bit.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU_8bit"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : ALU_8bit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ALU_8bit.v" in library work
+Module <ALU_8bit> compiled
+No errors in compilation
+Analysis of file <"ALU_8bit.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ALU_8bit> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ALU_8bit>.
+WARNING:Xst:2323 - "ALU_8bit.v" line 34: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 34: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 34: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 34: $display : NOT A A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 38: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 38: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 38: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 38: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 38: $display : NOR A=%b B=%b S=%d F=%b
+WARNING:Xst:883 - "ALU_8bit.v" line 40: Ignored duplicate item in case statement. 
+WARNING:Xst:2323 - "ALU_8bit.v" line 46: Parameter 2 is not constant in call of system task $display.
+"ALU_8bit.v" line 46: $display : LOGIC 0 S=%d F=00000000
+WARNING:Xst:2323 - "ALU_8bit.v" line 50: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 50: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 50: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 50: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 50: $display : NAND A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 54: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 54: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 54: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 54: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 54: $display : XOR A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 58: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 58: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 58: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 58: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 58: $display : NOT B A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 62: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 62: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 62: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 62: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 62: $display : A AND (NOT B) A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 66: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 66: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 66: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 66: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 66: $display : (NOT A) or B : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 70: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 70: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 70: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 70: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 70: $display : XNOR A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 74: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 74: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 74: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 74: $display : B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 78: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 78: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 78: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 78: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 78: $display : AND A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 82: Parameter 2 is not constant in call of system task $display.
+"ALU_8bit.v" line 82: $display : LOGIC 1 S=%d F=00000001
+WARNING:Xst:2323 - "ALU_8bit.v" line 86: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 86: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 86: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 86: $display : A OR (NOT B) A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 90: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 90: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 90: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 90: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 90: $display : OR A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 94: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 94: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 94: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 94: $display : A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 103: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 103: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 103: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 103: $display : A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 107: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 107: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 107: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 107: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 107: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:883 - "ALU_8bit.v" line 109: Ignored duplicate item in case statement. 
+WARNING:Xst:2323 - "ALU_8bit.v" line 115: Parameter 2 is not constant in call of system task $display.
+"ALU_8bit.v" line 115: $display : S=%d F=00000000000000000000000011111111
+WARNING:Xst:2323 - "ALU_8bit.v" line 119: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 119: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 119: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 119: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 119: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 123: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 123: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 123: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 123: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 123: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 127: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 127: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 127: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 127: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 127: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 131: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 131: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 131: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 131: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 131: $display :  A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 135: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 135: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 135: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 135: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 135: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 139: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 139: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 139: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 139: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 139: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 143: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 143: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 143: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 143: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 143: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 147: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 147: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 147: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 147: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 147: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 151: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 151: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 151: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 151: $display : A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 155: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 155: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 155: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 155: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 155: $display : A=%b  B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 159: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 159: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 159: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 159: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 159: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 163: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 163: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 163: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 163: $display : A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 172: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 172: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 172: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 172: $display : A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 176: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 176: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 176: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 176: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 176: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:883 - "ALU_8bit.v" line 178: Ignored duplicate item in case statement. 
+WARNING:Xst:2323 - "ALU_8bit.v" line 184: Parameter 2 is not constant in call of system task $display.
+"ALU_8bit.v" line 184: $display : S=%d F=00000000000000000000000000000000
+WARNING:Xst:2323 - "ALU_8bit.v" line 188: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 188: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 188: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 188: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 188: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 192: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 192: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 192: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 192: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 192: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 196: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 196: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 196: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 196: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 196: $display : B A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 200: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 200: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 200: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 200: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 200: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 204: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 204: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 204: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 204: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 204: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 208: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 208: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 208: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 208: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 208: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 212: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 212: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 212: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 212: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 212: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 216: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 216: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 216: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 216: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 216: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 220: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 220: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 220: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 220: $display : A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 224: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 224: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 224: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 224: $display : A=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 228: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 228: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 228: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 228: Parameter 5 is not constant in call of system task $display.
+"ALU_8bit.v" line 228: $display : A=%b B=%b S=%d F=%b
+WARNING:Xst:2323 - "ALU_8bit.v" line 232: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 232: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU_8bit.v" line 232: Parameter 4 is not constant in call of system task $display.
+"ALU_8bit.v" line 232: $display : A=%b S=%d F=%b
+Module <ALU_8bit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ALU_8bit>.
+    Related source file is "ALU_8bit.v".
+WARNING:Xst:643 - "ALU_8bit.v" line 118: The result of a 8x8-bit multiplication is partially used. Only the 8 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "ALU_8bit.v" line 130: The result of a 32x8-bit multiplication is partially used. Only the 8 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:737 - Found 8-bit latch for signal <F>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 8x8-bit multiplier for signal <F$mult0003> created at line 146.
+    Found 8x8-bit multiplier for signal <F$mult0004> created at line 118.
+    Found 32x8-bit multiplier for signal <F$mult0005> created at line 130.
+    Found 8-bit adder for signal <old_F_12$add0000> created at line 106.
+    Found 8-bit adder for signal <old_F_17$add0000> created at line 134.
+    Found 8-bit adder for signal <old_F_18$add0000> created at line 142.
+    Found 8-bit adder for signal <old_F_30$add0000> created at line 211.
+    Summary:
+	inferred  23 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+Unit <ALU_8bit> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x8-bit multiplier                                   : 1
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 23
+ 8-bit adder                                           : 18
+ 8-bit subtractor                                      : 5
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x8-bit multiplier                                   : 1
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 23
+ 8-bit adder                                           : 18
+ 8-bit subtractor                                      : 5
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALU_8bit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU_8bit, actual ratio is 13.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ALU_8bit.ngr
+Top Level Output File Name         : ALU_8bit
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 30
+
+Cell Usage :
+# BELS                             : 648
+#      GND                         : 1
+#      INV                         : 8
+#      LUT2                        : 132
+#      LUT3                        : 55
+#      LUT4                        : 205
+#      MUXCY                       : 105
+#      MUXF5                       : 21
+#      VCC                         : 1
+#      XORCY                       : 120
+# FlipFlops/Latches                : 8
+#      LD                          : 8
+# IO Buffers                       : 30
+#      IBUF                        : 22
+#      OBUF                        : 8
+# MULTs                            : 3
+#      MULT18X18                   : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      215  out of   1920    11%  
+ Number of 4 input LUTs:                400  out of   3840    10%  
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    173    17%  
+    IOB Flip Flops:                       8
+ Number of MULT18X18s:                    3  out of     12    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+F_not0002(F_not00021:O)            | NONE(*)(F_0)           | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 20.841ns
+   Maximum output required time after clock: 7.078ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'F_not0002'
+  Total number of paths / destination ports: 10871 / 8
+-------------------------------------------------------------------------
+Offset:              20.841ns (Levels of Logic = 14)
+  Source:            A<0> (PAD)
+  Destination:       F_7 (LATCH)
+  Destination Clock: F_not0002 falling
+
+  Data Path: A<0> to F_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.821   1.830  A_0_IBUF (A_0_IBUF)
+     MULT18X18:A0->P6      6   2.513   1.198  Mmult_F_mult0003 (F_mult0003<6>)
+     LUT2:I1->O            1   0.551   0.000  Madd_old_F_17_add0000_lut<6> (Madd_old_F_17_add0000_lut<6>)
+     MUXCY:S->O            0   0.500   0.000  Madd_old_F_17_add0000_cy<6> (Madd_old_F_17_add0000_cy<6>)
+     XORCY:CI->O           2   0.904   1.072  Madd_old_F_17_add0000_xor<7> (Madd__old_F_29_lut<7>)
+     LUT3:I1->O            1   0.551   0.000  F_mux0000<7>120_SW01 (F_mux0000<7>120_SW0)
+     MUXF5:I1->O           1   0.360   0.869  F_mux0000<7>120_SW0_f5 (N169)
+     LUT4:I2->O            1   0.551   0.869  F_mux0000<7>120 (F_mux0000<7>120)
+     LUT4:I2->O            1   0.551   1.140  F_mux0000<7>163 (F_mux0000<7>163)
+     LUT3:I0->O            1   0.551   0.869  F_mux0000<7>195 (F_mux0000<7>195)
+     LUT4:I2->O            1   0.551   0.996  F_mux0000<7>273 (F_mux0000<7>273)
+     LUT3:I1->O            1   0.551   0.869  F_mux0000<7>337_SW0 (N119)
+     LUT4:I2->O            1   0.551   0.869  F_mux0000<7>531_SW0 (N163)
+     LUT4:I2->O            1   0.551   0.000  F_mux0000<7>531 (F_mux0000<7>)
+     LD:D                      0.203          F_7
+    ----------------------------------------
+    Total                     20.841ns (10.260ns logic, 10.581ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'F_not0002'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              7.078ns (Levels of Logic = 1)
+  Source:            F_7 (LATCH)
+  Destination:       F<7> (PAD)
+  Source Clock:      F_not0002 falling
+
+  Data Path: F_7 to F<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.633   0.801  F_7 (F_7)
+     OBUF:I->O                 5.644          F_7_OBUF (F<7>)
+    ----------------------------------------
+    Total                      7.078ns (6.277ns logic, 0.801ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.71 secs
+ 
+--> 
+
+
+Total memory usage is 523548 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  163 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

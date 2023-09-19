@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ise/Documents/ALU_8bit/TB_ALU_8bit_isim_beh.exe" -prj "/home/ise/Documents/ALU_8bit/TB_ALU_8bit_beh.prj" "work.TB_ALU_8bit" "work.glbl" 
